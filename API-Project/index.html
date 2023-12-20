@@ -1,10 +1,36 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API-Project</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API</title>
+  <style>
+    button {
+      padding: 0.7rem;
+      width: 20%
+    }
+  </style>
 </head>
+
 <body>
-  
+
+  <header class="header">
+    <h1 class="header-title">Card Suits</h1>
+  </header>
+  <div class="filterb">
+    <button class="filter-buttons" id="all">All</button>
+    <button class="filter-buttons" id="Hearts">Hearts</button>
+    <button class="filter-buttons" id="Spades">Spades</button>
+    <button class="filter-buttons" id="Clubs">Clubs</button>
+    <button class="filter-buttons" id="Diamonds">Diamonds</button>
+  </div>
+
+  <div class="card-container">
+
+  </div>
+  <script type="module" src="./js/index.js"></script>
 </body>
+
 </html>
