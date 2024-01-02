@@ -1,0 +1,135 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Peralta'
+
+}
+
+body {
+  background-color: blue;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  font-size: 8rem;
+  margin: 3% auto;
+  border: 1rem solid rgb(255, 0, 0);
+  width: 65%;
+  text-align: center;
+  border-radius: 3rem;
+  box-sizing: border-box;
+  background-color: lime;
+  box-shadow: 10px 10px 3px yellow;
+  padding: 2rem;
+}
+
+.filterb {
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+
+.filter-buttons {
+  width: 14%;
+  font-size: 4rem;
+  padding: 9rem auto;
+  margin: 3% auto;
+  border: 0.5rem solid lightgreen;
+  text-align: center;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  background-color: green;
+  box-shadow: 5px 5px 3px white;
+}
+
+.filter-buttons:hover {
+  background-color: darkgreen;
+  border: 0.5rem solid rgb(0, 0, 0);
+  box-shadow: 5px 5px 3px rgb(0, 0, 0);
+}
+
+.cards {
+  box-shadow: 10px 7px 5px lightblue;
+  border-radius: 3rem;
+  width: 26%;
+  height: 43rem;
+  font-size: 7rem;
+  background-color: rgb(4, 83, 255);
+  margin: 3rem auto;
+  align-items: center;
+  border: 0.3rem solid rgb(230, 10, 10);
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1500px) {
+
+
+  .header-title {
+    font-size: 7rem;
+    margin: 3.5% auto;
+
+  }
+}
+
+@media (max-width: 1080px) {
+
+
+  .header-title {
+    font-size: 6rem;
+    margin: 5% auto;
+
+  }
+}
+
+@media (max-width: 400px) {
+
+  .cards {
+    box-shadow: 10px 7px 5px lightblue;
+    border-radius: 3rem;
+    width: 30%;
+    height: 25rem;
+    font-size: 1rem;
+    background-color: rgb(18, 3, 85);
+    margin: 3rem auto;
+    align-items: center;
+    border: 0.3rem solid rgb(235, 9, 9);
+    padding: 2rem;
+  }
+
+  .filter-buttons {
+    font-size: 1.5rem;
+    padding: 9rem auto;
+    margin: 3% auto;
+    border: 0.5rem solid lightgreen;
+    text-align: center;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    background-color: green;
+    box-shadow: 5px 5px 3px white;
+  }
+
+  .header-title {
+    font-size: 4.5rem;
+    margin: 7% auto;
+
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  
+}
+
