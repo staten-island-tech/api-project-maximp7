@@ -1,4 +1,4 @@
-import "../styles/style.css";
+import "../style.css";
 
 const URL = "https://deckofcardsapi.com/api/deck/new/draw/?count=52";
 
