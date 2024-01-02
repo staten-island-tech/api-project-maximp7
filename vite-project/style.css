@@ -1,0 +1,52 @@
+:root {
+  --Orange: #da942b;
+  --Red: #d73838;
+  --Ice: #388fd7;
+  --Blue: #3852d7;
+}
+
+.summer {
+  background-color: var(--Orange);
+}
+
+.winter {
+  background-color: var(--Ice);
+}
+
+.theme {
+  margin: 20px;
+}
+
+.filter-buttons {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cardcontainer {
+  display: grid;
+  gap: 10px;
+  margin: 10px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#themeButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #d65454;
+  border: none;
+  border-radius: 5px;
+}
