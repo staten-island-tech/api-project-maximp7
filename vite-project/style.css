@@ -10,7 +10,7 @@ body,
 }
 
 body {
-  background-color: blue;
+  background-color: rgb(185, 185, 228);
 }
 
 .header-title {
@@ -18,13 +18,13 @@ body {
   justify-content: center;
   font-size: 8rem;
   margin: 3% auto;
-  border: 1rem solid rgb(255, 0, 0);
+  border: 1rem solid rgb(238, 63, 63);
   width: 65%;
   text-align: center;
   border-radius: 3rem;
   box-sizing: border-box;
-  background-color: rgb(57, 243, 234);
-  box-shadow: 10px 10px 3px rgb(172, 172, 5);
+  background-color: rgb(134, 245, 239);
+  box-shadow: 10px 10px 3px rgb(212, 212, 58);
   padding: 2rem;
 }
 
@@ -42,16 +42,16 @@ body {
   font-size: 4rem;
   padding: 9rem auto;
   margin: 3% auto;
-  border: 0.5rem solid lightgreen;
+  border: 0.5rem solid rgb(14, 116, 14);
   text-align: center;
   border-radius: 2rem;
   box-sizing: border-box;
-  background-color: green;
-  box-shadow: 5px 5px 3px white;
+  background-color: rgb(188, 247, 188);
+  box-shadow: 5px 5px 3px rgb(240, 144, 144);
 }
 
 .filter-buttons:hover {
-  background-color: darkgreen;
+  background-color: rgb(252, 253, 252);
   border: 0.5rem solid rgb(0, 0, 0);
   box-shadow: 5px 5px 3px rgb(0, 0, 0);
 }
@@ -62,7 +62,7 @@ body {
   width: 26%;
   height: 43rem;
   font-size: 7rem;
-  background-color: rgb(4, 83, 255);
+  background-color: rgb(133, 164, 231);
   margin: 3rem auto;
   align-items: center;
   border: 0.3rem solid rgb(230, 10, 10);
@@ -100,7 +100,7 @@ body {
     width: 30%;
     height: 25rem;
     font-size: 1rem;
-    background-color: rgb(18, 3, 85);
+    background-color: rgb(0, 0, 0);
     margin: 3rem auto;
     align-items: center;
     border: 0.3rem solid rgb(235, 9, 9);

@@ -16,25 +16,24 @@ const DOMSelectors = {
 
 
 function Displaying() {
-     fetch(URL)
-       .then((response) => response.json())
-       .then((data) => {
-
-
-         data.cards.forEach((element)=> document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-         `<div class="cards">
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      data.cards.forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(
+        "beforeend",
+        `<div class="cards">
            <div class="card-image">
-             <img class="pic" src="${element.image}">
+             <img class="pic" src="${element.image}" alt="${element.value} of ${element.suit}">
            </div>
            <div class="card-content">
              <h3>${element.value}</h3>
              <p>${element.suit}</p>
            </div>
-       </div>`)
-       
-       )})
-       .catch((error) => console.log(error));
-   }
+       </div>`
+      ));
+    })
+    .catch((error) => console.log(error));
+}
 Displaying();
 
 
