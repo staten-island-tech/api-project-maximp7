@@ -1,6 +1,5 @@
 import "/style.css";
 
-
 const URL = "https://deckofcardsapi.com/api/deck/new/draw/?count=52";
 
 const DOMSelectors = {
@@ -13,15 +12,14 @@ const DOMSelectors = {
   cardcontainer: document.querySelector(".card-container"),
 };
 
-
-
 function Displaying() {
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
-      data.cards.forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(
-        "beforeend",
-        `<div class="cards">
+      data.cards.forEach((element) =>
+        document.querySelector(".card-container").insertAdjacentHTML(
+          "beforeend",
+          `<div class="cards">
            <div class="card-image">
              <img class="pic" src="${element.image}" alt="${element.value} of ${element.suit}">
            </div>
@@ -30,23 +28,23 @@ function Displaying() {
              <p>${element.suit}</p>
            </div>
        </div>`
-      ));
+        )
+      );
     })
     .catch((error) => console.log(error));
 }
 Displaying();
 
-
-
 function displayHearts() {
-
-fetch(URL)
-.then((response) => response.json())
-.then((datah) => {
-
-  datah.cards.filter((element) => element.suit === "HEARTS")
-  .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-  `<div class="cards">
+  fetch(URL)
+    .then((response) => response.json())
+    .then((datah) => {
+      datah.cards
+        .filter((element) => element.suit === "HEARTS")
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
     <div class="card-image">
       <img class="pic" src="${element.image}">
     </div>
@@ -54,17 +52,22 @@ fetch(URL)
       <h3>${element.value}</h3>
       <p>${element.suit}</p>
     </div>
-</div>`))
-})}
-  
-function displaySpades(){
-fetch(URL)
-.then((response) => response.json())
-.then((datah) => {
+</div>`
+          )
+        );
+    });
+}
 
-  datah.cards.filter((element) => element.suit === "SPADES")
-  .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-  `<div class="cards">
+function displaySpades() {
+  fetch(URL)
+    .then((response) => response.json())
+    .then((datah) => {
+      datah.cards
+        .filter((element) => element.suit === "SPADES")
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
     <div class="card-image">
       <img class="pic" src="${element.image}">
     </div>
@@ -72,17 +75,22 @@ fetch(URL)
       <h3>${element.value}</h3>
       <p>${element.suit}</p>
     </div>
-</div>`))
-})}
+</div>`
+          )
+        );
+    });
+}
 
 function displayClubs() {
   fetch(URL)
-  .then((response) => response.json())
-  .then((datah) => {
-  
-    datah.cards.filter((element) => element.suit === "CLUBS")
-    .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-    `<div class="cards">
+    .then((response) => response.json())
+    .then((datah) => {
+      datah.cards
+        .filter((element) => element.suit === "CLUBS")
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
       <div class="card-image">
         <img class="pic" src="${element.image}">
       </div>
@@ -90,16 +98,21 @@ function displayClubs() {
         <h3>${element.value}</h3>
         <p>${element.suit}</p>
       </div>
-  </div>`))
-  })}
+  </div>`
+          )
+        );
+    });
+}
 function displayDiamonds() {
   fetch(URL)
-  .then((response) => response.json())
-  .then((datah) => {
-  
-    datah.cards.filter((element) => element.suit === "DIAMONDS")
-    .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-    `<div class="cards">
+    .then((response) => response.json())
+    .then((datah) => {
+      datah.cards
+        .filter((element) => element.suit === "DIAMONDS")
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
       <div class="card-image">
         <img class="pic" src="${element.image}">
       </div>
@@ -107,18 +120,22 @@ function displayDiamonds() {
         <h3>${element.value}</h3>
         <p>${element.suit}</p>
       </div>
-  </div>`))
-  })}
+  </div>`
+          )
+        );
+    });
+}
 
 function displayK() {
   fetch(URL)
-  .then((response) => response.json())
-  .then((datah) => {
-  
-    datah.cards.filter((element) => 
-    element.value.includes("K"))
-    .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-    `<div class="cards">
+    .then((response) => response.json())
+    .then((datah) => {
+      datah.cards
+        .filter((element) => element.value.includes("K"))
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
       <div class="card-image">
         <img class="pic" src="${element.image}">
       </div>
@@ -126,18 +143,22 @@ function displayK() {
         <h3>${element.value}</h3>
         <p>${element.suit}</p>
       </div>
-  </div>`))
-  })}
+  </div>`
+          )
+        );
+    });
+}
 
-  function displayE() {
-    fetch(URL)
+function displayE() {
+  fetch(URL)
     .then((response) => response.json())
     .then((datah) => {
-    
-      datah.cards.filter((element) => 
-      element.value.includes("E"))
-      .forEach((element) => document.querySelector(".card-container").insertAdjacentHTML(    "beforeend",
-      `<div class="cards">
+      datah.cards
+        .filter((element) => element.value.includes("E"))
+        .forEach((element) =>
+          document.querySelector(".card-container").insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
         <div class="card-image">
           <img class="pic" src="${element.image}">
         </div>
@@ -145,8 +166,11 @@ function displayK() {
           <h3>${element.value}</h3>
           <p>${element.suit}</p>
         </div>
-    </div>`))
-    })}
+    </div>`
+          )
+        );
+    });
+}
 
 function erase() {
   DOMSelectors.cardcontainer.innerHTML = "";
