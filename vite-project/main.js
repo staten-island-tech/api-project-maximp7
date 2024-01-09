@@ -147,7 +147,7 @@ function Clubsp() {
   erase();
   displayClubs();
 }
-function Diamondp() {
+function Diamondsp() {
   erase();
   displayDiamonds();
 }
@@ -156,4 +156,4 @@ DOMSelectors.allb.addEventListener("click", Allp);
 DOMSelectors.Heartsb.addEventListener("click", Heartsp);
 DOMSelectors.Spadesb.addEventListener("click", Spadesp);
 DOMSelectors.Cloverb.addEventListener("click", Clubsp);
-DOMSelectors.Diamondb.addEventListener("click", Diamondp);
+DOMSelectors.Diamondsb.addEventListener("click", Diamondsp);
