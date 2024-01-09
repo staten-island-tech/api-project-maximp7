@@ -7,8 +7,7 @@ const DOMSelectors = {
   Heartsb: document.querySelector("#Hearts"),
   Spadesb: document.querySelector("#Spades"),
   Cloverb: document.querySelector("#Clubs"),
-  Diamondb: document.querySelector("#Diamonds"),
-  Royalsb: document.querySelector("#Royals"),
+  Diamondsb: document.querySelector("#Diamonds"),
   cardcontainer: document.querySelector(".card-container"),
 };
 
@@ -126,52 +125,6 @@ function displayDiamonds() {
     });
 }
 
-function displayK() {
-  fetch(URL)
-    .then((response) => response.json())
-    .then((datah) => {
-      datah.cards
-        .filter((element) => element.value.includes("K"))
-        .forEach((element) =>
-          document.querySelector(".card-container").insertAdjacentHTML(
-            "beforeend",
-            `<div class="cards">
-      <div class="card-image">
-        <img class="pic" src="${element.image}">
-      </div>
-      <div class="card-content">
-        <h3>${element.value}</h3>
-        <p>${element.suit}</p>
-      </div>
-  </div>`
-          )
-        );
-    });
-}
-
-function displayE() {
-  fetch(URL)
-    .then((response) => response.json())
-    .then((datah) => {
-      datah.cards
-        .filter((element) => element.value.includes("E"))
-        .forEach((element) =>
-          document.querySelector(".card-container").insertAdjacentHTML(
-            "beforeend",
-            `<div class="cards">
-        <div class="card-image">
-          <img class="pic" src="${element.image}">
-        </div>
-        <div class="card-content">
-          <h3>${element.value}</h3>
-          <p>${element.suit}</p>
-        </div>
-    </div>`
-          )
-        );
-    });
-}
-
 function erase() {
   DOMSelectors.cardcontainer.innerHTML = "";
 }
@@ -198,15 +151,9 @@ function Diamondp() {
   erase();
   displayDiamonds();
 }
-function Royalsp() {
-  erase();
-  displayK();
-  displayE();
-}
 
 DOMSelectors.allb.addEventListener("click", Allp);
 DOMSelectors.Heartsb.addEventListener("click", Heartsp);
 DOMSelectors.Spadesb.addEventListener("click", Spadesp);
 DOMSelectors.Cloverb.addEventListener("click", Clubsp);
 DOMSelectors.Diamondb.addEventListener("click", Diamondp);
-DOMSelectors.Royalsb.addEventListener("click", Royalsp);
