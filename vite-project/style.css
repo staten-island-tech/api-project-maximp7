@@ -3,9 +3,9 @@ body,
 * {
   padding: 0;
   margin: 0;
-  font-size: 62.5%;
+  font-size: 60%;
   box-sizing: border-box;
-  font-family: 'Peralta'
+  font-family: 'Ariala'
 
 }
 
@@ -16,16 +16,16 @@ body {
 .header-title {
   display: flex;
   justify-content: center;
-  font-size: 8rem;
+  font-size: 10rem;
   margin: 3% auto;
   border: 1rem solid rgb(238, 63, 63);
-  width: 65%;
+  width: 60%;
   text-align: center;
   border-radius: 3rem;
   box-sizing: border-box;
   background-color: rgb(134, 245, 239);
   box-shadow: 10px 10px 3px rgb(212, 212, 58);
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .filterb {
@@ -38,11 +38,11 @@ body {
 }
 
 .filter-buttons {
-  width: 14%;
-  font-size: 4rem;
-  padding: 9rem auto;
+  width: 20%;
+  font-size: 5rem;
+  padding: 10rem auto;
   margin: 3% auto;
-  border: 0.5rem solid rgb(14, 116, 14);
+  border: .7rem solid rgb(14, 116, 14);
   text-align: center;
   border-radius: 2rem;
   box-sizing: border-box;
@@ -53,19 +53,19 @@ body {
 .filter-buttons:hover {
   background-color: rgb(252, 253, 252);
   border: 0.5rem solid rgb(0, 0, 0);
-  box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  box-shadow: 5px 5px 3px rgb(247, 133, 133);
 }
 
 .cards {
   box-shadow: 10px 7px 5px lightblue;
   border-radius: 3rem;
-  width: 26%;
-  height: 43rem;
+  width: 25%;
+  height: 40rem;
   font-size: 7rem;
   background-color: rgb(133, 164, 231);
-  margin: 3rem auto;
+  margin: 5rem auto;
   align-items: center;
-  border: 0.3rem solid rgb(230, 10, 10);
+  border: 0.5rem solid rgb(230, 10, 10);
   padding: 2rem;
   display: flex;
   flex-flow: row wrap;
@@ -108,9 +108,9 @@ body {
   }
 
   .filter-buttons {
-    font-size: 1.5rem;
-    padding: 9rem auto;
-    margin: 3% auto;
+    font-size: 1rem;
+    padding: 10rem auto;
+    margin: 5% auto;
     border: 0.5rem solid lightgreen;
     text-align: center;
     border-radius: 2rem;
