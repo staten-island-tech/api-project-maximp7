@@ -11,30 +11,44 @@ const DOMSelectors = {
   cardcontainer: document.querySelector(".card-container"),
 };
 
-function Displaying() {
+function displayCardsBySuit(suit) {
   fetch(URL)
     .then((response) => response.json())
     .then((data) => {
-      data.cards.forEach((element) =>
-        document.querySelector(".card-container").insertAdjacentHTML(
-          "beforeend",
-          `<div class="cards">
-           <div class="card-image">
-             <img class="pic" src="${element.image}" alt="${element.value} of ${element.suit}">
-           </div>
-           <div class="card-content">
-             <h3>${element.value}</h3>
-             <p>${element.suit}</p>
-           </div>
-       </div>`
-        )
-      );
+      DOMSelectors.cardcontainer.innerHTML = "";
+      data.cards
+        .filter((element) => suit ? element.suit === suit : true)
+        .forEach((element) => {
+          DOMSelectors.cardcontainer.insertAdjacentHTML(
+            "beforeend",
+            `<div class="cards">
+              <div class="card-image">
+                <img class="pic" src="${element.image}" alt="${element.value} of ${element.suit}">
+              </div>
+              <div class="card-content">
+                <h3>${element.value}</h3>
+                <h2>${element.suit}</h2>
+              </div>
+            </div>`
+          );
+        });
     })
     .catch((error) => console.log(error));
 }
-Displaying();
 
-function displayHearts() {
+function eraseAndDisplay(suit) {
+  DOMSelectors.cardcontainer.innerHTML = "";
+  displayCardsBySuit(suit);
+}
+
+DOMSelectors.allb.addEventListener("click", () => eraseAndDisplay());
+DOMSelectors.Heartsb.addEventListener("click", () => eraseAndDisplay("HEARTS"));
+DOMSelectors.Spadesb.addEventListener("click", () => eraseAndDisplay("SPADES"));
+DOMSelectors.Cloverb.addEventListener("click", () => eraseAndDisplay("CLUBS"));
+DOMSelectors.Diamondsb.addEventListener("click", () => eraseAndDisplay("DIAMONDS"));
+
+
+/* function displayHearts() {
   fetch(URL)
     .then((response) => response.json())
     .then((datah) => {
@@ -157,3 +171,4 @@ DOMSelectors.Heartsb.addEventListener("click", Heartsp);
 DOMSelectors.Spadesb.addEventListener("click", Spadesp);
 DOMSelectors.Cloverb.addEventListener("click", Clubsp);
 DOMSelectors.Diamondsb.addEventListener("click", Diamondsp);
+ */
